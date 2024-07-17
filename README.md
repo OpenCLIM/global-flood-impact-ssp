@@ -1,24 +1,20 @@
-# flood-impact-inputs
-This model takes all of the parameter/ input data from the user specifically for the urban flooding workflow. 
-This data is then propogated through the model, reducing user input. 
+# global-flood-impact-ssp
+This model is optional - users can select a future urban projection (ssp) and the chosen year (year). 
+Data outputs from the UDM model must be added as input files, with the selected ssp and year included in the name. 
+The outputs from UDM are usually in .zip file. No modifications to these need to be made.
 
-## Description
-All data/ choices made by the user are inputted at this stage of the model to reduce user error. 
-This process simplifies the user input methods.
 
 ## Input Parameters
-*Location
-  * Description: 
-
-
+*Year
+  * Description: The future year of interest.
+* SSP
+  * Desctiption: The selected Shared Socio-Economic Pathway
+    
 ## Input Files (data slots)
-* Boundary
-  * Description: A .gpkg of the geographical area of interest. 
-  * Location: /data/boundary
 * SSP Datasets
   * Description: zipped outputs for all of the SSP scenario UDM outputs.
   * Location: /data/ssps
 
 ## Outputs
-The model should output a csv containing a list of all parameters and user responses.
-The boundary file, renamed after the chosen location.
+The model should output an updated csv file, with the additional two parameter results.
+If there is a UDM output that matches the selected parameters, the file appears as an output ready to be unzipped and read.
