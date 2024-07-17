@@ -5,7 +5,7 @@ The outputs from UDM are usually in .zip file. No modifications to these need to
 
 
 ## Input Parameters
-*Year
+* Year
   * Description: The future year of interest.
 * SSP
   * Desctiption: The selected Shared Socio-Economic Pathway
