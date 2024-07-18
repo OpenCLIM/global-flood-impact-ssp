@@ -20,6 +20,7 @@ spec:
         title: SSP
         type: string
         description: The socio-economic pathway of interest.
+        required: false
         options:
           - name: 'ssp1'
             title: 'ssp1'
