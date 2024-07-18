@@ -57,7 +57,7 @@ spec:
       - name: SSP Scenarios
         description:
           Building polygons saved in .gpkg format. Zipped .gpkg files will also be accepted. 
-        path: inputs/vectors/
+        path: inputs/ssps/
         required: false
 
       - name: Parameters
