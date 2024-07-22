@@ -74,7 +74,7 @@ parameter_file = glob(parameters_path + "/*.csv", recursive = True)
 print('parameter_file:', parameter_file)
 
 # Print all of the input parameters to an excel sheet to be read in later
-with open(os.path.join('ssp-parameters.csv'), 'w') as f:
+with open(os.path.join(parameter_outputs_path,'ssp-parameters.csv'), 'w') as f:
     f.write('YEAR,%s\n' %year)
     f.write('SSP,%s\n' %ssp)
 
