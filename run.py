@@ -73,20 +73,25 @@ else:
 parameter_file = glob(parameters_path + "/*.csv", recursive = True)
 print('parameter_file:', parameter_file)
 
-# Move the amended parameter file to the outputs folder
-if len(parameter_file) == 1 :
-    file_path = os.path.splitext(parameter_file[0])
-    print('Filepath:',file_path)
-    filename=file_path[0].split("/")
-    print('Filename:',filename[-1])
+# Print all of the input parameters to an excel sheet to be read in later
+with open(os.path.join('ssp-parameters.csv'), 'w') as f:
+    f.write('YEAR,%s\n' %year)
+    f.write('SSP,%s\n' %ssp)
 
-    src = parameter_file[0]
-    print('src:',src)
-    dst = os.path.join(parameter_outputs_path,filename[-1] + '.csv')
-    print('dst,dst')
-    shutil.copy(src,dst)
+# # Move the amended parameter file to the outputs folder
+# if len(parameter_file) == 1 :
+#     file_path = os.path.splitext(parameter_file[0])
+#     print('Filepath:',file_path)
+#     filename=file_path[0].split("/")
+#     print('Filename:',filename[-1])
 
-    # Print all of the input parameters to an excel sheet to be read in later
-    with open(os.path.join(dst), 'a') as f:
-        f.write('YEAR,%s\n' %year)
-        f.write('SSP,%s\n' %ssp)
+#     src = parameter_file[0]
+#     print('src:',src)
+#     dst = os.path.join(parameter_outputs_path,filename[-1] + '.csv')
+#     print('dst,dst')
+#     shutil.copy(src,dst)
+
+#     # Print all of the input parameters to an excel sheet to be read in later
+#     with open(os.path.join(dst), 'a') as f:
+#         f.write('YEAR,%s\n' %year)
+#         f.write('SSP,%s\n' %ssp)
